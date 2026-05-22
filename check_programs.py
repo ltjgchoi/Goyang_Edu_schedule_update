@@ -120,7 +120,7 @@ def main():
                 f"🔗 <a href=\"{p['link']}\">바로가기</a>\n"
                 f"━━━━━━━━━━━━━━━━\n"
                 f"⏰ 확인시각: {now_str}"
-                f"🌐 변경 발생 URL: {URL_ALL}"
+             
             )
             send_telegram(msg)
         print(f"  신규 프로그램 {len(new_programs)}개 알림 전송 완료")
