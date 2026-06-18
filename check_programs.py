@@ -64,6 +64,11 @@ def fetch_programs() -> list[dict]:
         #            모집대상(9) 신청인원(10) 모집상태(11) 상세보기(12)
         name = cols[2].get_text(strip=True)
         status = cols[11].get_text(strip=True)
+
+        # "접수마감" 텍스트가 상태에 포함되어 있는 경우 제외
+        if "접수마감" in status:
+            continue
+
         recruit_period = cols[5].get_text(strip=True)
         target = cols[9].get_text(strip=True)
 
